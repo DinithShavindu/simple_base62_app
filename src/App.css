@@ -1,0 +1,124 @@
+.page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.card h1 {
+  font-size: 28px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab.active {
+  background: var(--bg);
+  color: var(--text-h);
+  box-shadow: var(--shadow);
+}
+
+.field-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.input,
+.output {
+  width: 100%;
+  box-sizing: border-box;
+  font: 15px/145% var(--mono);
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+.input:focus,
+.output:focus {
+  outline: 2px solid var(--accent-border);
+  outline-offset: -1px;
+}
+
+.output-wrap {
+  position: relative;
+}
+
+.output {
+  padding-right: 44px;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.copy-btn:hover:not(:disabled) {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.copy-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.copy-btn.copied {
+  color: #22c55e;
+  border-color: #22c55e;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 14px;
+  margin-top: -8px;
+}
